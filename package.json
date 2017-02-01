@@ -1,0 +1,37 @@
+{
+  "name": "Seditor",
+  "version": "0.0.0",
+  "description": "Scenario Editor inspired by Story Editor",
+  "main": "gulpfile.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remew/Seditor.git"
+  },
+  "keywords": [],
+  "author": "remew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/remew/Seditor/issues"
+  },
+  "homepage": "https://github.com/remew/Seditor#readme",
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "flow-bin": "^0.37.1",
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.2.2",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.8.4"
+  }
+}
+
