@@ -7,10 +7,10 @@ Vagrant.configure(2) do |config|
       vbox.name = "seditor-virtual-server"
   end
 
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  # config.vm.network "private_network", ip: "192.168.56.100"
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "private_network", ip: "192.168.56.101"
 
-  config.vm.synced_folder ".", "/host"
+  config.vm.synced_folder ".", "/vagrant"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
@@ -28,6 +28,7 @@ Vagrant.configure(2) do |config|
     echo "deb-src http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list
     apt-get update
     apt-get install -y nginx
+    service nginx start
     su ubuntu
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
     exit
