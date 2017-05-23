@@ -39,7 +39,9 @@ CREATE TABLE tag (
 CREATE TABLE tagging (
     scenario_id integer NOT NULL,
     tag_id integer NOT NULL,
-    PRIMARY KEY(scenario_id, tag_id)
+    PRIMARY KEY(scenario_id, tag_id),
+    foreign key(scenario_id) references scenario(id),
+    foreign key(tag_id) references tag(id)
 );
 
 
